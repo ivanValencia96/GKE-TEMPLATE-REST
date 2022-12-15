@@ -1,0 +1,21 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.7-SNAPSHOT'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.conexion.rest'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+tasks.named('test') {
+	//useJUnitPlatform()
+}
+
+apply from: 'dependencies.gradle'
